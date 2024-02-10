@@ -1,0 +1,30 @@
+<!-- views/funcionarios/index.handlebars -->
+{{!-- {{> layouts/main}} --}}
+
+<h1>Lista de Funcionários</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each funcionarios}}
+    <tr>
+      <td>{{this.id}}</td>
+      <td>{{this.nome}}</td>
+      <td>{{this.cpf}}</td>
+      <td>
+        <a href="/funcionarios/edit/{{this.id}}">Editar</a>
+        <a href="/funcionarios/delete/{{this.id}}">Excluir</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a href="/funcionarios/add">Adicionar Funcionário</a>

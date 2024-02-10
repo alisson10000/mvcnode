@@ -1,0 +1,16 @@
+<!-- views/funcionarios/edit.handlebars -->
+{{!-- {{> layouts/main}} --}}
+
+<h1>Editar Funcionário</h1>
+
+<form action="/funcionarios/edit/{{funcionario.id}}" method="post">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" value="{{funcionario.nome}}" required>
+
+  <label for="cpf">CPF:</label>
+  <input type="text" id="cpf" name="cpf" value="{{funcionario.cpf}}" required>
+
+  <button type="submit">Salvar</button>
+</form>
+
+<a href="/funcionarios">Voltar para a Lista</a>
